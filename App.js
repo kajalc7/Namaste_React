@@ -769,6 +769,16 @@ const stylecard={
 
 const RestaurantCard=(props)=>{
    const{resData}=props;
+
+   const{
+      cloudinaryImageId,
+      name,
+      cuisines,
+      sla: { deliveryTime },
+      costForTwo
+      ,avgRating
+   }=resData?.card.card.info
+
    return(
       <div className="Res-card" style={stylecard}>
          <img
@@ -779,11 +789,11 @@ const RestaurantCard=(props)=>{
           resData.card.card.info.cloudinaryImageId
          }
          />
-         <h3>{resData.card.card.info.name}</h3>
-         <h4>{resData.card.card.info.cuisines.join(", ")}</h4>
-         <h4>{resData.card.card.info.sla.slaString} minutes</h4>
-         <h4>{resData.card.card.info.costForTwo}</h4>
-         <h4>{resData.card.card.info.avgRating} Stars</h4>
+         <h3>{name}</h3>
+         <h4>{cuisines.join(", ")}</h4>
+         <h4>{deliveryTime} minutes</h4>
+         <h4>{costForTwo}</h4>
+         <h4>{avgRating} Stars</h4>
       </div>
    )
 }
@@ -796,12 +806,18 @@ const Body=()=>{
       <div className="body">
          <div className="search">Search</div>
             <div className="restaurant-container">
-               <RestaurantCard resData={resList[0]}/>
+               {
+                  resList.map((card, index) => (
+                  <RestaurantCard key={card.card.card.info.id} resData={card}/>
+                  // u can also use index as key but react dont recommned  index to be used as key
+                  // <RestaurantCard key={index} resData={card}/>
+               ))}
+               {/* <RestaurantCard resData={resList[0]}/>
                <RestaurantCard resData={resList[1]}/>
                <RestaurantCard resData={resList[2]}/>
                <RestaurantCard resData={resList[3]}/>
                <RestaurantCard resData={resList[4]}/>
-               <RestaurantCard resData={resList[5]}/>
+               <RestaurantCard resData={resList[5]}/> */}
             </div>
       </div>
    )
