@@ -1,45 +1,81 @@
-.header{
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+.header {
     display: flex;
     justify-content: space-between;
-    border:1px solid black;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.logo{
-    width: 150px;
+.logo {
+    width: 120px;
 }
 
-.nav-items>ul{
-    font-size: 24px;
+.nav-items > ul {
+    font-size: 18px;
     display: flex;
     list-style-type: none;
+    padding: 0;
 }
 
-.nav-items>ul>li{
-    padding:10px;
-    margin:10px;
+.nav-items > ul > li {
+    margin: 0 15px;
+    cursor: pointer;
 }
 
-.restaurant-container{
+/* Body styles */
+.body {
+    padding: 20px;
+}
+
+/* Restaurant container and card styles */
+.restaurant-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
 }
 
-.Res-card{
-    margin:5px;
-    padding: 5px;
-    width:250px;
-    height:450px;
+.Res-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
 }
 
-.Res-card:hover{
-    border:1px solid black;
-    cursor:pointer;
+.Res-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
-.search{
-    padding:10px;
+.res-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
 }
 
-.res-logo{
-    width:100%;
+.Res-card h3 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+}
+
+.Res-card h4 {
+    margin: 5px 0;
+    color: #010a13;
+    font-size: 16px;
+}
+
+.search {
+    padding: 10px 0;
 }
