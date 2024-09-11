@@ -6,8 +6,12 @@ import resList from "../utils/mockData";
 
 const Body= () => {
     
-const [listofRestaurants, setListOfRestaurants]=useState(resList);
+const arr=useState(resList);
 
+// const[listofRestaurants, setListOfRestaurants]=arr;
+
+const listofRestaurants=arr[0];
+const setListOfRestaurants=arr[1];
 
 
     return(
