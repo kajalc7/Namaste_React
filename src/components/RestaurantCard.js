@@ -7,7 +7,7 @@ const RestaurantCard=(props)=>{
        cloudinaryImageId,
        name,
        cuisines,
-       sla: { deliveryTime },
+       deliveryTime,
        costForTwo
        ,avgRating
     }=resData?.card.card.info

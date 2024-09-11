@@ -79,3 +79,7 @@ body {
 .search {
     padding: 10px 0;
 }
+ .filter-btn{
+    margin-bottom:10px;
+    cursor:pointer;
+ }
