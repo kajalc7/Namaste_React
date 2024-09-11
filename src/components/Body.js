@@ -1,84 +1,12 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState } from "react";
+import resList from "../utils/mockData";
 
 
 
 const Body= () => {
     
-const [listofRestaurants, setListOfRestaurants]=useState([
-    {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "3241",
-              "name": "Meghana Foods",
-              "cloudinaryImageId": "iivuhjc2mswi9lublktf",
-              "locality": "Residency Road",
-              "areaName": "Residency Road",
-              "costForTwo": "₹500 for two",
-              "deliveryTime": 23,
-              "cuisines": [
-                "Biryani",
-                "Andhra",
-                "South Indian",
-                "Chinese",
-                "Seafood"
-              ],
-              "avgRating": 4.6
-            }
-            }
-        }
-    },
-    {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "3242",
-              "name": "KFC",
-              "cloudinaryImageId": "iivuhjc2mswi9lublktf",
-              "locality": "Residency Road",
-              "areaName": "Residency Road",
-              "costForTwo": "₹500 for two",
-              "deliveryTime": 23,
-              "cuisines": [
-                "chicken",
-                "mughlai",
-                "north Indian",
-                "Chinese",
-                "Seafood"
-              ],
-              "avgRating": 4.0
-            }
-            }
-        }
-    },
-    {
-        "card": {
-          "card": {
-            "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-            "info": {
-              "id": "3243",
-              "name": "Dominos",
-              "cloudinaryImageId": "iivuhjc2mswi9lublktf",
-              "locality": "Residency Road",
-              "areaName": "Residency Road",
-              "costForTwo": "₹500 for two",
-              "deliveryTime": 23,
-              "cuisines": [
-                "chicken",
-                "mughlai",
-                "north Indian",
-                "Chinese",
-                "Seafood"
-              ],
-              "avgRating": 4.4
-            }
-            }
-        }
-    },
-]);
+const [listofRestaurants, setListOfRestaurants]=useState(resList);
 
 
 
@@ -89,7 +17,7 @@ const [listofRestaurants, setListOfRestaurants]=useState([
             onClick=
             {()=>{
                 const filteredlist= listofRestaurants.filter(
-                    (res) => res.card.card.info.avgRating > 4
+                    (res) => res.card.card.info.avgRating > 4.4
                 );
                 setListOfRestaurants(filteredlist);
             }}>
