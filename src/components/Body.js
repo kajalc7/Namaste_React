@@ -1,8 +1,11 @@
 import RestaurantCard from "./RestaurantCard";
+import { useState } from "react";
 
-//normal JS variable uing this like we are getting two restaurant using filter  in console 
-//but that is not getting reflected in UI for that we need to give some powerto our js variable
-let listofRestaurants =[
+
+
+const Body= () => {
+    
+const [listofRestaurants, setListOfRestaurants]=useState([
     {
         "card": {
           "card": {
@@ -75,21 +78,22 @@ let listofRestaurants =[
             }
         }
     },
+]);
 
-];
 
-const Body=()=>{
+
     return(
        <div className="body">
           <div className="filter">
             <button className="filter-btn" 
             onClick=
             {()=>{
-                listofRestaurants = listofRestaurants.filter(
+                const filteredlist= listofRestaurants.filter(
                     (res) => res.card.card.info.avgRating > 4
                 );
-                console.log(listofRestaurants);
-            }}>Top Rated Button</button>
+                setListOfRestaurants(filteredlist);
+            }}>
+              Top Rated Button</button>
           </div>
              <div className="restaurant-container">
                 {
