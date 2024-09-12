@@ -1,19 +1,19 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import resList from "../utils/mockData";
 
 
 
 const Body= () => {
     
-const arr=useState(resList);
+const[listofRestaurants, setListOfRestaurants]=useState(resList);
 
-// const[listofRestaurants, setListOfRestaurants]=arr;
+useEffect(()=>{
+    console.log("useEffect called");
+},[]);
 
-const listofRestaurants=arr[0];
-const setListOfRestaurants=arr[1];
 
-
+console.log("body rendered before useeffect")
     return(
        <div className="body">
           <div className="filter">
