@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import { Loading_URL } from "../utils/constants";
+import Shimmer from "./Shimmer";
 
 
 
@@ -29,17 +30,9 @@ setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithSty
 
 };
 
-//this is for loading contant to increase the user experience
+//showing shimmerui instead of loader acc to latets practice
 if (listofRestaurants.length === 0) {
-  return (
-    <div className="loading-container">
-      <img
-        className="loading-image"
-        alt="Food-loading"
-        src={Loading_URL}
-      />
-    </div>
-  );
+  return <Shimmer/>
 }
 
 

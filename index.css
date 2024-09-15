@@ -95,5 +95,22 @@ body {
     width: 300px; /* Increased width for a larger image */
     height: auto; /* Maintain aspect ratio */
   }
+
+  .shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Similar gap as Res-card */
+  }
+  
+  .shimmer-card {
+    width: 250px; /* Same width as Res-card */
+    height: 400px; /* Adjust height to match Res-card content */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    animation: shimmer 1.5s infinite ease-in-out;
+  } 
   
   
