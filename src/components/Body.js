@@ -1,5 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
+import { Loading_URL } from "../utils/constants";
+
 
 
 
@@ -20,11 +22,26 @@ const fetchData = async () =>{
 
 console.log(json);
 
-setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+//optional chaining
+setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
-console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+// console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
 
 };
+
+//this is for loading contant to increase the user experience
+if (listofRestaurants.length === 0) {
+  return (
+    <div className="loading-container">
+      <img
+        className="loading-image"
+        alt="Food-loading"
+        src={Loading_URL}
+      />
+    </div>
+  );
+}
+
 
 return(
        <div className="body">

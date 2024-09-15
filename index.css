@@ -83,3 +83,17 @@ body {
     margin-bottom:10px;
     cursor:pointer;
  }
+
+ .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .loading-image {
+    width: 300px; /* Increased width for a larger image */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  
