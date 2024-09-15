@@ -19,19 +19,22 @@ const fetchData = async () =>{
   //converting api data into json
   const json= await data.json();
 
-  console.log(json);
-}
+console.log(json);
 
+setListOfRestaurants(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
 
-console.log("body rendered before useeffect")
-    return(
+console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
+
+};
+
+return(
        <div className="body">
           <div className="filter">
             <button className="filter-btn" 
             onClick=
             {()=>{
                 const filteredlist= listofRestaurants.filter(
-                    (res) => res.card.card.info.avgRating > 4.4
+                    (res) => res.info.avgRating > 4.4
                 );
                 setListOfRestaurants(filteredlist);
             }}>
@@ -39,8 +42,8 @@ console.log("body rendered before useeffect")
           </div>
              <div className="restaurant-container">
                 {
-                   listofRestaurants.map((card, index) => (
-                   <RestaurantCard key={card.card.card.info.id} resData={card}/>
+                   listofRestaurants.map((restaurant) => (
+                   <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
                    // u can also use index as key but react dont recommned  index to be used as key
                    // <RestaurantCard key={index} resData={card}/>
                 ))}

@@ -10,7 +10,7 @@ const RestaurantCard=(props)=>{
        deliveryTime,
        costForTwo
        ,avgRating
-    }=resData?.card.card.info
+    }=resData?.info
  
     return(
        <div className="Res-card" >
@@ -19,7 +19,7 @@ const RestaurantCard=(props)=>{
           alt="res-logo"
           src={CDN_URL
             +
-           resData.card.card.info.cloudinaryImageId
+           cloudinaryImageId
           }
           />
           <h3>{name}</h3>

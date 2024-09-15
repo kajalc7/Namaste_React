@@ -1,723 +1,733 @@
 const resList = [
-    {
-    "card": {
-      "card": {
-        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-        "info": {
-          "id": "3241",
-          "name": "Meghana Foods",
-          "cloudinaryImageId": "iivuhjc2mswi9lublktf",
-          "locality": "Residency Road",
-          "areaName": "Residency Road",
-          "costForTwo": "₹500 for two",
-          "cuisines": [
-            "Biryani",
-            "Andhra",
-            "South Indian",
-            "Chinese",
-            "Seafood"
-          ],
-          "avgRating": 4.6,
-          "parentId": "635",
-          "avgRatingString": "4.6",
-          "totalRatingsString": "78K+",
-          "sla": {
-            "deliveryTime": 23,
-            "lastMileTravel": 2.1,
-            "serviceability": "SERVICEABLE",
-            "slaString": "20-25 mins",
-            "lastMileTravelString": "2.1 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2024-09-08 23:59:00",
-            "opened": true
-          },
-          "badges": {
-            "imageBadges": [
-              {
-                "imageId": "Green%20Dot%20Awards/Best%20In%20Veg%20Biryani.png",
-                "description": "Delivery!"
-              },
-              {
-                "imageId": "Rxawards/_CATEGORY-Biryani.png",
-                "description": "Delivery!"
-              }
-            ]
-          },
-          "isOpen": true,
-          "aggregatedDiscountInfoV2": {
-            
-          },
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "textBased": {
-                
-              },
-              "imageBased": {
-                "badgeObject": [
-                  {
-                    "attributes": {
-                      "imageId": "Green%20Dot%20Awards/Best%20In%20Veg%20Biryani.png",
-                      "description": "Delivery!"
-                    }
-                  },
-                  {
-                    "attributes": {
-                      "imageId": "Rxawards/_CATEGORY-Biryani.png",
-                      "description": "Delivery!"
-                    }
-                  }
-                ]
-              },
-              "textExtendedBadges": {
-                
-              }
-            }
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          },
-          "externalRatings": {
-            "aggregatedRating": {
-              "rating": "4.3",
-              "ratingCount": "20K+"
-            },
-            "source": "GOOGLE",
-            "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-          },
-          "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=3241&source=collection&query=Biryani",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+  {
+    type: "restaurant",
+    info: {
+      type: "F",
+      id: "73011",
+      name: "KFC",
+      uuid: "27ff4155-fe46-418e-9862-ab98953bf953",
+      city: "22",
+      area: "Anand Vihar Colony",
+      totalRatingsString: "5000+ ratings",
+      cloudinaryImageId: "iivuhjc2mswi9lublktf",
+      cuisines: ["American", "Snacks", "Biryani"],
+      tags: [],
+      costForTwo: 30000,
+      costForTwoString: "₹300 FOR TWO",
+      deliveryTime: 31,
+      minDeliveryTime: 31,
+      maxDeliveryTime: 31,
+      slaString: "31 MINS",
+      lastMileTravel: 6.199999809265137,
+      slugs: {
+        restaurant: "kfc-chukkuwala-chukkuwala",
+        city: "dehradun",
       },
-      "relevance": {
-        "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-        "sectionId": "MENU_RETURN_FOOD"
-      }
-    }
+      cityState: "22",
+      address:
+        "KFC Restaurant, Khasra No 1281/1291, Opp Dr Manish Jain hospital, Chakrata road, Dehradun-248001",
+      locality: "Clock Tower",
+      parentId: 547,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      ribbon: [
+        {
+          type: "PROMOTED",
+        },
+      ],
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "cid=5698075~p=1~eid=00000185-8b09-7c92-0e51-a04b00dc0124",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "6.1 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "73011",
+        deliveryTime: 31,
+        minDeliveryTime: 31,
+        maxDeliveryTime: 31,
+        lastMileTravel: 6.199999809265137,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: true,
+      avgRating: "4.5",
+      totalRatings: 5000,
+      new: false,
+    },
+    subtype: "basic",
   },
   {
-    "card": {
-      "card": {
-        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-        "info": {
-          "id": "30532",
-          "name": "Hotel Empire",
-          "cloudinaryImageId": "10f8b483521b9359d9c8fcd37f23c9d3",
-          "locality": "Infantry Road\t",
-          "areaName": "Infantry Road",
-          "costForTwo": "₹450 for two",
-          "cuisines": [
-            "Kebabs",
-            "Biryani"
-          ],
-          "avgRating": 4.5,
-          "parentId": "475",
-          "avgRatingString": "4.5",
-          "totalRatingsString": "18K+",
-          "promoted": true,
-          "adTrackingId": "cid=18174324~p=1~adgrpid=18174324#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=30532~eid=b8b36644-45ba-4859-8cf1-53386088f7d2~srvts=1725779426766~collid=83639",
-          "sla": {
-            "deliveryTime": 38,
-            "lastMileTravel": 2.2,
-            "serviceability": "SERVICEABLE",
-            "slaString": "35-40 mins",
-            "lastMileTravelString": "2.2 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2024-09-09 03:00:00",
-            "opened": true
-          },
-          "badges": {
-            "imageBadges": [
-              {
-                "imageId": "Rxawards/_CATEGORY-North%20Indian.png",
-                "description": "Delivery!"
-              }
-            ]
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "textBased": {
-                
-              },
-              "imageBased": {
-                "badgeObject": [
-                  {
-                    "attributes": {
-                      "imageId": "Rxawards/_CATEGORY-North%20Indian.png",
-                      "description": "Delivery!"
-                    }
-                  }
-                ]
-              },
-              "textExtendedBadges": {
-                
-              }
-            }
-          },
-          "aggregatedDiscountInfoV3": {
-            "header": "10% OFF",
-            "subHeader": "UPTO ₹40"
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          },
-          "externalRatings": {
-            "aggregatedRating": {
-              "rating": "4.3",
-              "ratingCount": "18K+"
-            },
-            "source": "GOOGLE",
-            "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-          },
-          "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=30532&source=collection&query=Biryani",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+    type: "restaurant",
+    info: {
+      type: "F",
+      id: "542132",
+      name: "Domnik Pizza",
+      uuid: "f2ee37f5-9ab0-4903-9420-6cae020b0a38",
+      city: "22",
+      area: "Majra    Bansal Home",
+      totalRatingsString: "50+ ratings",
+      cloudinaryImageId: "10f8b483521b9359d9c8fcd37f23c9d3",
+      cuisines: ["Pizzas", "Italian", "Fast Food", "Snacks", "Beverages"],
+      tags: [],
+      costForTwo: 30000,
+      costForTwoString: "₹300 FOR TWO",
+      deliveryTime: 33,
+      minDeliveryTime: 33,
+      maxDeliveryTime: 33,
+      slaString: "33 MINS",
+      lastMileTravel: 0.6000000238418579,
+      slugs: {
+        restaurant: "domnik-pizza-patel-nagar-patel-nagar-2",
+        city: "dehradun",
       },
-      "relevance": {
-        "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-        "sectionId": "MENU_RETURN_FOOD"
-      }
-    }
+      cityState: "22",
+      address:
+        "28/3 Sewala Chandravani Road, Arcedia Grant, Dehradun Rural, Dehradun, Uttarakhand",
+      locality: "Patel Nagar",
+      parentId: 22321,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.6 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "542132",
+        deliveryTime: 33,
+        minDeliveryTime: 33,
+        maxDeliveryTime: 33,
+        lastMileTravel: 0.6000000238418579,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "3.8",
+      totalRatings: 50,
+      new: false,
+    },
+    subtype: "basic",
   },
   {
-    "card": {
-      "card": {
-        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-        "info": {
-          "id": "3434",
-          "name": "Nandhini Deluxe",
-          "cloudinaryImageId": "b7df40343b2a9df3f275024aff13d5df",
-          "locality": "St. Marks Road",
-          "areaName": "St Marks Road",
-          "costForTwo": "₹500 for two",
-          "cuisines": [
-            "Andhra",
-            "Biryani",
-            "Chinese",
-            "North Indian"
-          ],
-          "avgRating": 4.4,
-          "parentId": "2451",
-          "avgRatingString": "4.4",
-          "totalRatingsString": "18K+",
-          "sla": {
-            "deliveryTime": 23,
-            "lastMileTravel": 0.9,
-            "serviceability": "SERVICEABLE",
-            "slaString": "20-25 mins",
-            "lastMileTravelString": "0.9 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2024-09-08 23:59:00",
-            "opened": true
-          },
-          "badges": {
-            
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "textBased": {
-                
-              },
-              "imageBased": {
-                
-              },
-              "textExtendedBadges": {
-                
-              }
-            }
-          },
-          "aggregatedDiscountInfoV3": {
-            "header": "60% OFF",
-            "subHeader": "UPTO ₹120"
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          },
-          "externalRatings": {
-            "aggregatedRating": {
-              "rating": "3.8",
-              "ratingCount": "1.4K+"
-            },
-            "source": "GOOGLE",
-            "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-          },
-          "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=3434&source=collection&query=Biryani",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+    type: "restaurant",
+    info: {
+      type: "F",
+      id: "321517",
+      name: "FOOD PLANET RESTAURANT",
+      uuid: "899d5dd4-200a-48b2-a321-391bb9486ec2",
+      city: "22",
+      area: "Majra",
+      totalRatingsString: "50+ ratings",
+      cloudinaryImageId: "cluiug5t7vmz7idrhh82",
+      cuisines: ["Indian", "Chinese", "Tandoor", "Thalis", "Fast Food"],
+      tags: [],
+      costForTwo: 20000,
+      costForTwoString: "₹200 FOR TWO",
+      deliveryTime: 25,
+      minDeliveryTime: 25,
+      maxDeliveryTime: 25,
+      slaString: "25 MINS",
+      lastMileTravel: 0.699999988079071,
+      slugs: {
+        restaurant: "food-planet-restaurant-patel-nagar-patel-nagar",
+        city: "dehradun",
       },
-      "relevance": {
-        "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-        "sectionId": "MENU_RETURN_FOOD"
-      }
-    }
+      cityState: "22",
+      address:
+        "157/11, Chandra Parisar Chandra Bani Rd, Ekta Enclave, Doon Enclave, Majra, Dehradun, Uttarakhand 248171",
+      locality: "Patel Nagar",
+      parentId: 81850,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.6 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "321517",
+        deliveryTime: 25,
+        minDeliveryTime: 25,
+        maxDeliveryTime: 25,
+        lastMileTravel: 0.699999988079071,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "2.8",
+      totalRatings: 50,
+      new: false,
+    },
+    subtype: "basic",
   },
   {
-    "card": {
-      "card": {
-        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-        "info": {
-          "id": "485933",
-          "name": "Dindigul Thalappakatti",
-          "cloudinaryImageId": "cluiug5t7vmz7idrhh82",
-          "locality": "Nexus",
-          "areaName": "Koramangala",
-          "costForTwo": "₹500 for two",
-          "cuisines": [
-            "South Indian",
-            "Biryani",
-            "Chinese",
-            "North Indian"
-          ],
-          "avgRating": 4.3,
-          "parentId": "332",
-          "avgRatingString": "4.3",
-          "totalRatingsString": "1.4K+",
-          "promoted": true,
-          "adTrackingId": "cid=18164704~p=2~adgrpid=18164704#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=485933~eid=0ac1729e-dc48-4f15-b04d-5f75ceb2df0d~srvts=1725779426766~collid=83639",
-          "sla": {
-            "deliveryTime": 40,
-            "lastMileTravel": 6.5,
-            "serviceability": "SERVICEABLE",
-            "slaString": "40-45 mins",
-            "lastMileTravelString": "6.5 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2024-09-09 00:00:00",
-            "opened": true
-          },
-          "badges": {
-            
-          },
-          "isOpen": true,
-          "aggregatedDiscountInfoV2": {
-            
-          },
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "textBased": {
-                
-              },
-              "imageBased": {
-                
-              },
-              "textExtendedBadges": {
-                
-              }
-            }
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          },
-          "externalRatings": {
-            "aggregatedRating": {
-              "rating": "--"
-            }
-          },
-          "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=485933&source=collection&query=Biryani",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+    type: "restaurant",
+    info: {
+      type: "F",
+      id: "311806",
+      name: "Burger King",
+      uuid: "162a4dc4-50de-452a-82cf-751e18ac9952",
+      city: "22",
+      area: "Anand Vihar Colony",
+      totalRatingsString: "5000+ ratings",
+      cloudinaryImageId: "b7df40343b2a9df3f275024aff13d5df",
+      cuisines: ["Burgers", "American"],
+      tags: [],
+      costForTwo: 35000,
+      costForTwoString: "₹350 FOR TWO",
+      deliveryTime: 39,
+      minDeliveryTime: 39,
+      maxDeliveryTime: 39,
+      slaString: "39 MINS",
+      lastMileTravel: 6.300000190734863,
+      slugs: {
+        restaurant: "burger-king-chakrata-road-ballupur",
+        city: "dehradun",
       },
-      "relevance": {
-        "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-        "sectionId": "MENU_RETURN_FOOD"
-      }
-    }
+      cityState: "22",
+      address:
+        "5/5,4/4 & 3/3, GROUND FLOOR, CHAKRATA ROAD, DEHRADUN, UTTRAKHAND",
+      locality: "CHAKRATA ROAD",
+      parentId: 166,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "60% off",
+        shortDescriptionList: [
+          {
+            meta: "60% off | Use STEALDEAL",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "60% off up to ₹120 | Use code STEALDEAL",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "60% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use STEALDEAL",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "60% off up to ₹120 | Use code STEALDEAL",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      ribbon: [
+        {
+          type: "PROMOTED",
+        },
+      ],
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "cid=5700193~p=4~eid=00000185-8b09-7c92-0e51-a04c00dc0405",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "6.3 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "311806",
+        deliveryTime: 39,
+        minDeliveryTime: 39,
+        maxDeliveryTime: 39,
+        lastMileTravel: 6.300000190734863,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: true,
+      avgRating: "4.6",
+      totalRatings: 5000,
+      new: false,
+    },
+    subtype: "basic",
   },
   {
-    "card": {
-      "card": {
-        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-        "info": {
-          "id": "50571",
-          "name": "Taj Hotel",
-          "cloudinaryImageId": "ymm2ypnhg7ptqaqmonxz",
-          "locality": "Shivaji Nagar",
-          "areaName": "Shivaji Nagar",
-          "costForTwo": "₹500 for two",
-          "cuisines": [
-            "Chinese",
-            "Mughlai"
-          ],
-          "avgRating": 4.3,
-          "parentId": "21656",
-          "avgRatingString": "4.3",
-          "totalRatingsString": "5.2K+",
-          "sla": {
-            "deliveryTime": 38,
-            "lastMileTravel": 2.7,
-            "serviceability": "SERVICEABLE",
-            "slaString": "35-40 mins",
-            "lastMileTravelString": "2.7 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2024-09-15 00:00:00",
-            "opened": true
-          },
-          "badges": {
-            
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "textExtendedBadges": {
-                
-              },
-              "textBased": {
-                
-              },
-              "imageBased": {
-                
-              }
-            }
-          },
-          "aggregatedDiscountInfoV3": {
-            "header": "ITEMS",
-            "subHeader": "AT ₹99"
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          },
-          "externalRatings": {
-            "aggregatedRating": {
-              "rating": "3.7",
-              "ratingCount": "11K+"
-            },
-            "source": "GOOGLE",
-            "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-          },
-          "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=50571&source=collection&query=Biryani",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+    type: "restaurant",
+    info: {
+      type: "F",
+      id: "132460",
+      name: "Annapurna Andhra Mess",
+      uuid: "c6460418-904b-4371-9e04-0ce8b1b46cae",
+      city: "22",
+      area: "Dehradun",
+      totalRatingsString: "1000+ ratings",
+      cloudinaryImageId: "ymm2ypnhg7ptqaqmonxz",
+      cuisines: ["South Indian", "Biryani", "North Indian"],
+      tags: [],
+      costForTwo: 20000,
+      costForTwoString: "₹200 FOR TWO",
+      deliveryTime: 25,
+      minDeliveryTime: 25,
+      maxDeliveryTime: 25,
+      slaString: "25 MINS",
+      lastMileTravel: 1.399999976158142,
+      slugs: {
+        restaurant: "annapurna-andhra-mess-subhash-nagar-subhash-nagar",
+        city: "dehradun",
       },
-      "relevance": {
-        "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-        "sectionId": "MENU_RETURN_FOOD"
-      }
-    }
+      cityState: "22",
+      address:
+        "keshav enclave sewla khurd chandrabani road behind uttranchal PG college",
+      locality: "Patel Nagar",
+      parentId: 33997,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "1.3 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "132460",
+        deliveryTime: 25,
+        minDeliveryTime: 25,
+        maxDeliveryTime: 25,
+        lastMileTravel: 1.399999976158142,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.0",
+      totalRatings: 1000,
+      new: false,
+    },
+    subtype: "basic",
   },
   {
-    "card": {
-      "card": {
-        "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-        "info": {
-          "id": "91629",
-          "name": "Sheeshkebab",
-          "cloudinaryImageId": "rll6kv2is6jbeltpxmst",
-          "locality": "Frazer Town",
-          "areaName": "Central Bangalore",
-          "costForTwo": "₹600 for two",
-          "cuisines": [
-            "Persian",
-            "Arabian",
-            "Kebabs",
-            "Middle Eastern",
-            "Biryani",
-            "Indian"
-          ],
-          "avgRating": 4.2,
-          "parentId": "21632",
-          "avgRatingString": "4.2",
-          "totalRatingsString": "4.3K+",
-          "promoted": true,
-          "adTrackingId": "cid=18174570~p=5~adgrpid=18174570#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=91629~eid=c5a40def-89cd-42c4-bb9f-58526e2d0033~srvts=1725779426766~collid=83639",
-          "sla": {
-            "deliveryTime": 45,
-            "lastMileTravel": 5,
-            "serviceability": "SERVICEABLE",
-            "slaString": "40-45 mins",
-            "lastMileTravelString": "5.0 km",
-            "iconType": "ICON_TYPE_EMPTY"
-          },
-          "availability": {
-            "nextCloseTime": "2024-09-08 23:56:00",
-            "opened": true
-          },
-          "badges": {
-            
-          },
-          "isOpen": true,
-          "type": "F",
-          "badgesV2": {
-            "entityBadges": {
-              "textBased": {
-                
-              },
-              "imageBased": {
-                
-              },
-              "textExtendedBadges": {
-                
-              }
-            }
-          },
-          "aggregatedDiscountInfoV3": {
-            "header": "10% OFF",
-            "subHeader": "ABOVE ₹950",
-            "discountTag": "FLAT DEAL"
-          },
-          "orderabilityCommunication": {
-            "title": {
-              
-            },
-            "subTitle": {
-              
-            },
-            "message": {
-              
-            },
-            "customIcon": {
-              
-            }
-          },
-          "differentiatedUi": {
-            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-            "differentiatedUiMediaDetails": {
-              "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-              "lottie": {
-                
-              },
-              "video": {
-                
-              }
-            }
-          },
-          "reviewsSummary": {
-            
-          },
-          "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-          "restaurantOfferPresentationInfo": {
-            
-          },
-          "externalRatings": {
-            "aggregatedRating": {
-              "rating": "4.1",
-              "ratingCount": "3.6K+"
-            },
-            "source": "GOOGLE",
-            "sourceIconImageId": "v1704440323/google_ratings/rating_google_tag"
-          },
-          "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
-        },
-        "analytics": {
-          
-        },
-        "cta": {
-          "link": "swiggy://menu?restaurant_id=91629&source=collection&query=Biryani",
-          "text": "RESTAURANT_MENU",
-          "type": "DEEPLINK"
-        },
-        "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food"
+    type: "restaurant",
+    info: {
+      type: "F",
+      id: "496677",
+      name: "Uncle Ji Restaurant",
+      uuid: "e652ab57-22c2-4226-b5ea-a5caa26ee0f8",
+      city: "22",
+      area: "Patel Nagar",
+      totalRatingsString: "Too Few Ratings",
+      cloudinaryImageId: "iivuhjc2mswi9lublktf",
+      cuisines: ["North Indian", "Snacks", "Beverages"],
+      tags: [],
+      costForTwo: 30000,
+      costForTwoString: "₹300 FOR TWO",
+      deliveryTime: 31,
+      minDeliveryTime: 31,
+      maxDeliveryTime: 31,
+      slaString: "31 MINS",
+      lastMileTravel: 0.800000011920929,
+      slugs: {
+        restaurant: "uncle-ji-restaurant-patel-nagar-patel-nagar",
+        city: "dehradun",
       },
-      "relevance": {
-        "type": "RELEVANCE_TYPE_ON_MENU_RETURN",
-        "sectionId": "MENU_RETURN_FOOD"
-      }
-    }
-  }
- ];
- 
- export default resList;
+      cityState: "22",
+      address: "348 santosh tower, majra road gram majra dehradun 248001",
+      locality: "Patel Nagar",
+      parentId: 298209,
+      unserviceable: false,
+      veg: false,
+      select: false,
+      favorite: false,
+      tradeCampaignHeaders: [],
+      aggregatedDiscountInfo: {
+        header: "50% off",
+        shortDescriptionList: [
+          {
+            meta: "50% off | Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      aggregatedDiscountInfoV2: {
+        header: "50% OFF",
+        shortDescriptionList: [
+          {
+            meta: "Use WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        descriptionList: [
+          {
+            meta: "50% off up to ₹100 | Use code WELCOME50",
+            discountType: "Percentage",
+            operationType: "RESTAURANT",
+          },
+        ],
+        subHeader: "",
+        headerType: 0,
+        superFreedel: "",
+      },
+      chain: [],
+      feeDetails: {
+        fees: [],
+        totalFees: 0,
+        message: "",
+        title: "",
+        amount: "",
+        icon: "",
+      },
+      availability: {
+        opened: true,
+        nextOpenMessage: "",
+        nextCloseMessage: "",
+      },
+      longDistanceEnabled: 0,
+      rainMode: "NONE",
+      thirdPartyAddress: false,
+      thirdPartyVendor: "",
+      adTrackingID: "",
+      badges: {
+        imageBased: [],
+        textBased: [],
+        textExtendedBadges: [],
+      },
+      lastMileTravelString: "0.8 kms",
+      hasSurge: false,
+      sla: {
+        restaurantId: "496677",
+        deliveryTime: 31,
+        minDeliveryTime: 31,
+        maxDeliveryTime: 31,
+        lastMileTravel: 0.800000011920929,
+        lastMileDistance: 0,
+        serviceability: "SERVICEABLE",
+        rainMode: "NONE",
+        longDistance: "NOT_LONG_DISTANCE",
+        preferentialService: false,
+        iconType: "EMPTY",
+      },
+      promoted: false,
+      avgRating: "4.5",
+      totalRatings: 0,
+      new: false,
+    },
+    subtype: "basic",
+  },
+];
+
+export default resList;
