@@ -8,6 +8,8 @@ import Shimmer from "./Shimmer";
 const Body= () => {
     
 const[listofRestaurants, setListOfRestaurants]=useState([]);
+const[filteredrestaurants,setFilteredRestaurants]=useState([]);
+
 const[searchText,setSearchText]=useState("");
 
 
@@ -27,6 +29,7 @@ console.log(json);
 
 //optional chaining
 setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+setFilteredRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
 };
 
 
@@ -49,7 +52,7 @@ return listofRestaurants.length === 0? <Shimmer/> :(
               //then you can use below statement
               //res.info.name.toLowerCase().includes(searchText.toLowerCase()))
                 const filteredRestuarants = listofRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
-                setListOfRestaurants(filteredRestuarants);
+                setFilteredRestaurants(filteredRestuarants);
                 console.log(filteredRestuarants);
               }}>Search</button>
             </div>
@@ -59,13 +62,13 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 const filteredlist= listofRestaurants.filter(
                     (res) => res.info.avgRating > 4.4
                 );
-                setListOfRestaurants(filteredlist);
+                setFilteredRestaurants(filteredlist);
             }}>
               Top Rated Button</button>
           </div>
              <div className="restaurant-container">
                 {
-                   listofRestaurants.map((restaurant) => (
+                   filteredrestaurants.map((restaurant) => (
                    <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
                 ))}
              </div>
