@@ -1,6 +1,5 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
-import { Loading_URL } from "../utils/constants";
 import Shimmer from "./Shimmer";
 
 
@@ -9,10 +8,13 @@ import Shimmer from "./Shimmer";
 const Body= () => {
     
 const[listofRestaurants, setListOfRestaurants]=useState([]);
+const[searchText,setSearchText]=useState("");
+
 
 useEffect(()=>{
     fetchData();
 },[]);
+
 //calling api
 const fetchData = async () =>{
   const data= await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
@@ -25,8 +27,6 @@ console.log(json);
 
 //optional chaining
 setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-
-
 };
 
 
@@ -35,6 +35,24 @@ setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithSty
 return listofRestaurants.length === 0? <Shimmer/> :(
        <div className="body">
           <div className="filter">
+            <div className="search">
+              <input type="text" className="search-box" value={searchText}
+               onChange={(e)=>{
+                setSearchText(e.target.value);
+                }}/>
+              <button onClick={()=>{
+                //filter the restaurants card and update the UI it means we nee dto get the
+                //text value and binds it to local state variable because we need to track it
+                console.log(searchText)
+
+              //this will give you exact result but in make sure of small capital letter.if you want that irrespective of capital mall leterr it give you result
+              //then you can use below statement
+              //res.info.name.toLowerCase().includes(searchText.toLowerCase()))
+                const filteredRestuarants = listofRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                setListOfRestaurants(filteredRestuarants);
+                console.log(filteredRestuarants);
+              }}>Search</button>
+            </div>
             <button className="filter-btn" 
             onClick=
             {()=>{
