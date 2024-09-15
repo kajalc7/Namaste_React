@@ -30,13 +30,13 @@ setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithSty
 
 };
 
-//showing shimmerui instead of loader acc to latets practice
-if (listofRestaurants.length === 0) {
-  return <Shimmer/>
-}
+//conditional rendering showing shimmerui instead of loader acc to latets practice
+// if (listofRestaurants.length === 0) {
+//   return <Shimmer/>
+// }
 
 
-return(
+return listofRestaurants.length === 0? <Shimmer/> :(
        <div className="body">
           <div className="filter">
             <button className="filter-btn" 
