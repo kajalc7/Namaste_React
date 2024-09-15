@@ -26,14 +26,10 @@ console.log(json);
 //optional chaining
 setListOfRestaurants(json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
 
-// console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants);
 
 };
 
-//conditional rendering showing shimmerui instead of loader acc to latets practice
-// if (listofRestaurants.length === 0) {
-//   return <Shimmer/>
-// }
+
 
 
 return listofRestaurants.length === 0? <Shimmer/> :(
@@ -53,8 +49,6 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 {
                    listofRestaurants.map((restaurant) => (
                    <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
-                   // u can also use index as key but react dont recommned  index to be used as key
-                   // <RestaurantCard key={index} resData={card}/>
                 ))}
              </div>
        </div>
