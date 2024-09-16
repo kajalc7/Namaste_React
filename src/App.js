@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header'
 import Body from './components/Body';
-import { createBrowserRouter , RouterProvider} from 'react-router-dom';
+import { createBrowserRouter , RouterProvider, Outlet} from 'react-router-dom';
 import About from './components/About';
 import ContactUs from './components/ContactUs';
 import Error from './components/Error';
@@ -12,7 +12,13 @@ import Error from './components/Error';
    return(
       <div className="App">
          <Header/>
-         <Body/>
+         {/*if my path is  =/  */}
+         {/* <Body/> */}
+         {/*if my path is  =/about  */}
+         {/* <About/> */}
+         {/*if my path is  =/contactus  */}
+         {/* <ContactUs/> */}
+         <Outlet/>
       </div>
    )
  }
@@ -21,17 +27,22 @@ const appRouter = createBrowserRouter([
    { 
       path:'/',
       element:<AppLayout/>,
+      children:[
+         {
+            path:"/",
+            element:<Body/>,
+         },
+         { 
+            path:'/about',
+            element:<About/>,
+         },
+         { 
+            path:'/contactus',
+            element:<ContactUs/>,
+         }
+      ],
       errorElement:<Error/>
    },
-   { 
-      path:'/about',
-      element:<About/>,
-   },
-   { 
-      path:'/contactus',
-      element:<ContactUs/>,
-   }
-
 ]);
 
  const root= ReactDOM.createRoot(document.getElementById("root"));
