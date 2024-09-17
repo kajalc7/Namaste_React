@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
+import { Link } from "react-router-dom";
 
 
 
@@ -68,7 +69,10 @@ return listofRestaurants.length === 0? <Shimmer/> :(
              <div className="restaurant-container">
                 {
                    filteredrestaurants.map((restaurant) => (
+                   <Link key={restaurant.info.id} 
+                   to ={"./restaurants/"+ restaurant.info.id}>
                    <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
+                   </Link>
                 ))}
              </div>
        </div>

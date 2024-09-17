@@ -6,3 +6,6 @@ export const LOGO_URL=
 
 export const Loading_URL = 
         "https://cdnl.iconscout.com/lottie/premium/preview/fast-food-delivery-loader-animation-download-in-lottie-json-gif-static-svg-file-formats--delicious-logo-eating-burger-junk-loaders-pack-user-interface-animations-6899740.png?f=webp";
+
+export const menu_api =
+        "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9715987&lng=77.5945627&restaurantId="
