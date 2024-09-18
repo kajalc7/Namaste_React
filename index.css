@@ -1,12 +1,15 @@
-
 /* Header styles */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    background-color: #f8f9fa;
-    border-bottom: 1px solid #e9ecef;
+    padding: 15px;
+    background-color: #e0f7e9; /* Very light green background */
+    border-bottom: 1px solid #c8e6c9;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Add margin below header */
+    color: #333; /* Darker text color for better readability */
 }
 
 .logo {
@@ -69,53 +72,40 @@
     font-size: 16px;
 }
 
+/* Search and filter styles */
 .search {
     padding: 20px 10px;
-}
- .filter-btn{
-    margin-bottom:10px;
-    cursor:pointer;
- }
-
- .loading-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh; /* Full height of the viewport */
-  }
-  
-  .loading-image {
-    width: 300px; /* Increased width for a larger image */
-    height: auto; /* Maintain aspect ratio */
-  }
+    gap: 10px; /* Space between search box and button */
+}
 
-  .shimmer-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Similar gap as Res-card */
-  }
-  
-  .shimmer-card {
-    width: 250px; /* Same width as Res-card */
-    height: 400px; /* Adjust height to match Res-card content */
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    position: relative;
-    animation: shimmer 1.5s infinite ease-in-out;
-  } 
-  
-  .Login{
+.search-box {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.search button {
+    background-color: #2196F3; /* Blue background */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  /* General styling for the filter area */
+.search button:hover {
+    background-color: #0b7dda; /* Darker blue on hover */
+}
+
+/* General styling for the filter area */
 .filter {
     display: flex;
     align-items: center; /* Align items vertically center */
     gap: 10px; /* Space between elements */
-    
 }
 
 /* Styling for Top Rated button */
@@ -132,33 +122,77 @@
     background-color: #45a049; /* Darker green on hover */
 }
 
-/* Styling for search input box */
-.search-box {
-    padding: 10px 10px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
-    gap: 20px;
+/* Loading shimmer styles */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
 }
 
-/* Styling for search button */
-.search button {
-    background-color: #2196F3; /* Blue background */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+.loading-image {
+    width: 300px; /* Increased width for a larger image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.shimmer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Similar gap as Res-card */
+}
+
+.shimmer-card {
+    width: 250px; /* Same width as Res-card */
+    height: 400px; /* Adjust height to match Res-card content */
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    animation: shimmer 1.5s infinite ease-in-out;
+}
+
+/* Login button */
+.Login {
     cursor: pointer;
 }
 
-.search button:hover {
-    background-color: #0b7dda; /* Darker blue on hover */
+/* Shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: 200px 0;
+    }
 }
 
-/* Ensure vertical alignment for the search area */
-.search {
-    display: flex;
-    align-items: center;
+/* User component styles */
+.User {
+    padding: 20px;
+    background-color: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 400px; /* Limit the width for better readability */
+    margin: 20px auto; /* Center the component horizontally with spacing above and below */
+    text-align: center; /* Center align text */
+}
+
+/* Heading styles */
+.User h2 {
+    font-size: 24px; /* Larger font size for main heading */
+    margin-bottom: 10px; /* Space below the heading */
+    color: #333; /* Dark color for text */
+}
+
+.User h3 {
+    font-size: 20px; /* Slightly smaller font size for subheadings */
+    margin-bottom: 8px; /* Space below the subheading */
+    color: #555; /* Slightly lighter color for text */
+}
+
+.User h4 {
+    font-size: 18px; /* Font size for contact information */
+    color: #777; /* Even lighter color for text */
 }
 
