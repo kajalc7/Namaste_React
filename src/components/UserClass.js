@@ -7,6 +7,7 @@ class  UserClass extends React.Component {
         count: 0,
         count2: 1,
        };
+       console.log("child constructor")
     }
     
 
@@ -14,6 +15,7 @@ class  UserClass extends React.Component {
         //destructure
         const {Name,Location}=this.props
         const {count,count2}=this.state
+        console.log("child render")
         return (
             <div className="User">
                 <h1>Count1:{count}</h1>

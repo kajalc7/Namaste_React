@@ -3,11 +3,12 @@ import { useState } from "react";
 const User = (props) => {
     // Correct useState initialization
     const [count, setCount] = useState(0);
-    const [count2] = useState(1); // This state is static and won't change
+    const [count2, setCount2] = useState(1); // This state is static and won't change
 
     // Function to handle state update
     const incrementCount = () => {
         setCount(count + 1);
+        setCount2(count2 + 1);
     };
 
     return (
