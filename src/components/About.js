@@ -8,11 +8,24 @@ class About extends Component {
         console.log("Parent constructor")
 };
 
-//when it loads then in cosnole the order will be
-//parent constructor
-//parentrender
-//child constructro
-//child render
+componentDidMount(){
+    console.log("parent componentDidMount");
+}
+
+//agr child ke ander did mount kra h to 
+// parent constructor
+// parent render
+// childconstructor
+// childrender
+// childdidmount
+//but agr parent me bhi kr diya to 
+// parent constructor
+// parent render
+// child constructor
+// chold render
+// child didmount
+// parentdid mount
+
 render() {
  console.log("Parent render")
     return(

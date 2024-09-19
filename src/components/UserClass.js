@@ -9,7 +9,9 @@ class  UserClass extends React.Component {
        };
        console.log("child constructor")
     }
-    
+    componentDidMount(){
+        console.log("child componentDidMount");
+    }
 
     render(){
         //destructure
