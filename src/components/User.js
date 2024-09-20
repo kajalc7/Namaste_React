@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const User = (props) => {
     // Correct useState initialization
     const [count, setCount] = useState(0);
     const [count2, setCount2] = useState(1); // This state is static and won't change
 
+    
     // Function to handle state update
     const incrementCount = () => {
         setCount(count + 1);
