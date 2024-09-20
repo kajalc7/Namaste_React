@@ -34,12 +34,16 @@ async componentDidMount(){
         console.log("componentdid update called")
     }
 
+    componentWillUnmount(){
+        console.log("componentWillUnmount called");
+    }
     //child constructor
     //child render
     //child did mount
     //api call json print
     //child render json print
     //child didmount updated called
+    //component will unmount called when we change tab to hoem it means when component will go away or disappear
     render(){
         //destructure
        const{name,avatar_url, html_url,bio} = this.state.userInfo
