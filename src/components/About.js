@@ -15,8 +15,7 @@ componentDidMount(){
 render() {
  //console.log("Parent render")
     return(
-        <div>
-            <h1>this is class based component</h1>
+        <div>  
             <UserClass Name={"kajal chaudhary class"} Location ={"Pune function"}/>
         </div>
         );

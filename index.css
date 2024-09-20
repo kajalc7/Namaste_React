@@ -196,3 +196,10 @@
     color: #777; /* Even lighter color for text */
 }
 
+.User img {
+    width: 150px; /* Size of the avatar image */
+    height: 150px;
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensure the image fits inside the circle */
+}
