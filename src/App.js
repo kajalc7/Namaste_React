@@ -1,4 +1,4 @@
-import React from 'react';
+import React,  {lazy} from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header'
 import Body from './components/Body';
@@ -7,6 +7,15 @@ import About from './components/About';
 import ContactUs from './components/ContactUs';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
+//import Grocery from './components/Grocery';
+
+//chunking
+//lazyloading
+//dynamic loading
+//loadingONDemand
+//code Splitting
+
+const Grocery = lazy(()=>import("./components/Grocery"));
 
 
  const AppLayout=()=>{
@@ -40,6 +49,10 @@ const appRouter = createBrowserRouter([
          { 
             path:'/contactus',
             element:<ContactUs/>,
+         },
+         { 
+            path:'/grocery',
+            element:<Grocery/>,
          },
          { 
             path:"/restaurants/:resId",//resid this is after colon showing it will hbe dynmaic and keep changing

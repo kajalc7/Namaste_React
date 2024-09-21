@@ -29,6 +29,9 @@ const Header=()=>{
                 <li>
                   <Link to="/contactus">Contact us</Link>
                </li>
+               <li>
+                  <Link to="/grocery">Grocery</Link>
+               </li>
                 <li>Cart</li>
                 <button className="Login" onClick={()=>{
                   btnNameReact==="Login" ? setbtnNameReact("Logout") :setbtnNameReact("Login"); 
