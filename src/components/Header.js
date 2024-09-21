@@ -3,10 +3,12 @@ import ReactDOM from "react-dom";
 import { LOGO_URL } from "../utils/constants";
 import { useState } from "react";
 import { Link } from  "react-router-dom"
+import useOnlinestatus from "../utils/useOnlineStatus";
 
 
 const Header=()=>{
 
+   const onlinestatus = useOnlinestatus();
 
    const[btnNameReact,setbtnNameReact]=useState("Login")
     return(
@@ -16,14 +18,11 @@ const Header=()=>{
           </div>
           <div className="nav-items">
              <ul>
+               <li>
+                  Online Status:{onlinestatus ?"✅" :"🚫"}
+               </li>
                 <li>
                   <Link to="/">Home</Link></li>
-                {/* never use anchor tag because it reload entire page */}
-                 {/* <li> 
-                  <a href="/about">
-                  About
-                  </a>
-                  </li> */}
                 <li>
                   <Link to="/about">about</Link>
                 </li>

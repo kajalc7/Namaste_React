@@ -13,17 +13,6 @@ const RestaurantMenu = ()=>{
 
     const ResInfo = useRestaurantMenu(resId);
 
-    // useEffect(()=>{
-    //     fetchMenu();
-    // },[]);
-
-    // const fetchMenu=async()=>{
-    //     const data=await fetch(menu_api + resId );
-    //         // "&catalog_qa=undefined&submitAction=ENTER " //this is optional
-        
-    //     const json= await data.json();
-    //     setResInfo(json.data)
-    // }
     if (ResInfo===null) return
         <Shimmer/>  
     

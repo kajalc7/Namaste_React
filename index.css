@@ -203,3 +203,10 @@
     margin-bottom: 20px;
     object-fit: cover; /* Ensure the image fits inside the circle */
 }
+
+.offline-status {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    color: red;
+}
