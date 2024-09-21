@@ -1,4 +1,4 @@
-import React,  {lazy} from 'react';
+import React,  {lazy, Suspense} from 'react';
 import ReactDOM from 'react-dom/client';
 import Header from './components/Header'
 import Body from './components/Body';
@@ -15,6 +15,11 @@ import RestaurantMenu from './components/RestaurantMenu';
 //loadingONDemand
 //code Splitting
 
+
+//now this take time to load which leads to get error
+//as react is very fast and page loading takes time
+//so react susepend render so to tackle this issue we need to
+//use suspense which is a component which comes from react
 const Grocery = lazy(()=>import("./components/Grocery"));
 
 
@@ -52,7 +57,7 @@ const appRouter = createBrowserRouter([
          },
          { 
             path:'/grocery',
-            element:<Grocery/>,
+            element:<Suspense fallback= {<h1>Grocery is loading</h1>}><Grocery/></Suspense>,//this fallback wil take content which you want to show while your component is loading
          },
          { 
             path:"/restaurants/:resId",//resid this is after colon showing it will hbe dynmaic and keep changing
