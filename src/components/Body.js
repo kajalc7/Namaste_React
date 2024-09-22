@@ -43,13 +43,13 @@ if(onlineStatus===false)
 
 return listofRestaurants.length === 0? <Shimmer/> :(
        <div className="body">
-          <div className="filter">
-            <div className="search">
-              <input type="text" className="search-box" value={searchText}
+          <div className="flex justify-center place-content-center">
+            <div className="m-4 p-4">
+              <input type="text" className="border border-solid border-black rounded-md" value={searchText}
                onChange={(e)=>{
                 setSearchText(e.target.value);
                 }}/>
-              <button onClick={()=>{
+              <button className="px-2 py-2 bg-green-100 m-4 rounded-md" onClick={()=>{
                 //filter the restaurants card and update the UI it means we nee dto get the
                 //text value and binds it to local state variable because we need to track it
                 console.log(searchText)
@@ -62,7 +62,8 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 console.log(filteredRestuarants);
               }}>Search</button>
             </div>
-            <button className="filter-btn" 
+            <div className="m-4 p-4">
+            <button className="px-4 py-2 bg-green-100 m-4 rounded-md" 
             onClick=
             {()=>{
                 const filteredlist= listofRestaurants.filter(
@@ -71,6 +72,7 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 setFilteredRestaurants(filteredlist);
             }}>
               Top Rated Button</button>
+              </div>
           </div>
              <div className="restaurant-container">
                 {
