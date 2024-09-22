@@ -63,7 +63,7 @@ return listofRestaurants.length === 0? <Shimmer/> :(
               }}>Search</button>
             </div>
             <div className="m-4 p-4">
-            <button className="px-4 py-2 bg-green-100 m-4 rounded-md" 
+            <button className="px-4 py-2 bg-red-200 m-4 rounded-md" 
             onClick=
             {()=>{
                 const filteredlist= listofRestaurants.filter(
@@ -74,7 +74,7 @@ return listofRestaurants.length === 0? <Shimmer/> :(
               Top Rated Button</button>
               </div>
           </div>
-             <div className="restaurant-container">
+             <div className="flex flex-wrap">
                 {
                    filteredrestaurants.map((restaurant) => (
                    <Link key={restaurant.info.id} 
