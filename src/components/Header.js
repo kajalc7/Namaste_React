@@ -9,7 +9,8 @@ const Header = () => {
   const [btnNameReact, setbtnNameReact] = useState("Login");
 
   return (
-    <div className="flex justify-between items-center bg-orange-200 shadow-lg px-4 py-4 w-full max-w-screen-s rounded-xl mx-auto">
+    <div className="flex justify-between items-center bg-green-200  shadow-lg px-4 py-4 w-full max-w-screen-s rounded-xl mx-auto sm:bg-orange-200  lg:bg-orange-400">
+      {/* when header side will change solor will change to darker orange like when we shrink our screen */}
       <div className="logo-container">
         <img className="w-28" src={LOGO_URL} alt="logo" />
       </div>
