@@ -28,4 +28,16 @@ const RestaurantCard = (props) => {
     );
 };
 
+// Higher-order component of RestaurantCard that adds the "Opened" label
+export const withOpenLabel = (RestaurantCard) => {
+    return (props) => {
+        return (
+            <div className="relative">
+                <label className="absolute top-2 left-2 bg-green-600 text-white px-2 py-1 rounded-lg">Opened</label>
+                <RestaurantCard {...props} />
+            </div>
+        );
+    };
+};
+
 export default RestaurantCard;

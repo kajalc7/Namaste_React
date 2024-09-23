@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, {withOpenLabel} from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -13,6 +13,11 @@ const[listofRestaurants, setListOfRestaurants]=useState([]);
 const[filteredrestaurants,setFilteredRestaurants]=useState([]);
 
 const[searchText,setSearchText]=useState("");
+
+//higher order 
+const RestaurantCardOpened = withOpenLabel(RestaurantCard);
+
+console.log(listofRestaurants);
 
 
 useEffect(()=>{
@@ -50,13 +55,8 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 setSearchText(e.target.value);
                 }}/>
               <button className="px-2 py-2 bg-green-100 m-4 rounded-md" onClick={()=>{
-                //filter the restaurants card and update the UI it means we nee dto get the
-                //text value and binds it to local state variable because we need to track it
                 console.log(searchText)
 
-              //this will give you exact result but in make sure of small capital letter.if you want that irrespective of capital mall leterr it give you result
-              //then you can use below statement
-              //res.info.name.toLowerCase().includes(searchText.toLowerCase()))
                 const filteredRestuarants = listofRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                 setFilteredRestaurants(filteredRestuarants);
                 console.log(filteredRestuarants);
@@ -79,7 +79,15 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                    filteredrestaurants.map((restaurant) => (
                    <Link key={restaurant.info.id} 
                    to ={"./restaurants/"+ restaurant.info.id}>
-                   <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
+
+                    {/* if the restaurant is open so open tag to it else normal card used terniary operator*/}
+                    {
+                      restaurant.info.availability.opened ? (<RestaurantCardOpened  resData={restaurant}/>    
+                      ) : (
+                      <RestaurantCard key={restaurant.info.id} resData={restaurant}/>
+                    )
+                    }
+                   
                    </Link>
                 ))}
              </div>
