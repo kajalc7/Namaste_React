@@ -28,30 +28,23 @@ const RestaurantMenu = ()=>{
     // console.log(ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
 
 
+    //removing nested as few restauraunt does not have nested category
+    // const categories1 = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory")
+    // console.log(categories1)
+
  // filtering data on basis of categories
-    const categories1 = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory")
-        //if there is @type  if you have such kind of entity which is not variable u can put it inside [""];
+    const categories1 = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+
     console.log(categories1)
-
-
-    const categories2 = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
-
-    console.log(categories2)
 
 
     return (
         
-        <div className="menu">
-            <h1>{name}</h1>
-            <h3>{cuisines}</h3>
-            <h4>{costForTwoMessage}</h4>
-            <h5>{avgRating}</h5>
-            <h2>menu</h2>
-            <ul>
-                {itemCards.map((item) => (
-                    <li key={item.card.info.id}> {item.card.info.name} - {item.card.info.price/100} Rs </li>
-                ))} 
-            </ul>
+        <div className="text-center">
+            <h1 className="font-bold my-10 text-2xl">{name}</h1>
+            <p className="font-bold my-10 text-lg">{cuisines.join(", ")}
+                - {costForTwoMessage}
+            </p>
         </div>
     )
 }
