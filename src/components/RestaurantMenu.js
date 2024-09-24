@@ -23,7 +23,22 @@ const RestaurantMenu = ()=>{
     }=ResInfo?.cards[2]?.card?.card?.info;
 
     const { itemCards } = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card;
-    console.log(itemCards);
+
+    // this below line giving us all card based on categories
+    // console.log(ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards);
+
+
+ // filtering data on basis of categories
+    const categories1 = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.NestedItemCategory")
+        //if there is @type  if you have such kind of entity which is not variable u can put it inside [""];
+    console.log(categories1)
+
+
+    const categories2 = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+
+    console.log(categories2)
+
+
     return (
         
         <div className="menu">
