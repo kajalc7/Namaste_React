@@ -1,4 +1,5 @@
-const RestaurantCategory = () =>{
+const RestaurantCategory = ({data}) =>{
+    console.log(data)
     return <div>
             ResCategory
         </div>
