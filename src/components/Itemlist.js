@@ -19,11 +19,17 @@ const Itemlist = ({items})=> {
                 <p className = "text-xs">{item.card.info.description}</p>
             </div>
             <div className="relative w-3/12 p-4">
-                <img 
-                    src={CDN_URL + item.card.info.imageId} 
-                    className="w-full h-40 object-cover rounded-xl" 
-                    alt="food item"
-                />
+            {item.card.info.imageId ? (
+                    <img 
+                        src={CDN_URL + item.card.info.imageId} 
+                        className="w-full h-40 object-cover rounded-xl" 
+                        alt="food item"
+                    />
+                ) : (
+                    <div className="w-full h-40 bg-gray-300 flex items-center justify-center rounded-xl">
+                        <span className="text-gray-500 text-sm">No Image Available</span>
+                    </div>
+                )}
                 <button className="p-2 bg-white shadow-md rounded-xl absolute bottom-4 right-4 text-sm font-semibold">
                     Add +
                 </button>
