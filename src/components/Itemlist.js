@@ -18,11 +18,15 @@ const Itemlist = ({items})=> {
                 </div>
                 <p className = "text-xs">{item.card.info.description}</p>
             </div>
-            <div className="w-3/12 p-4">
+            <div className="relative w-3/12 p-4">
                 <img 
-                src={CDN_URL + item.card.info.imageId} 
-                className="w-auto rounded-md" 
+                    src={CDN_URL + item.card.info.imageId} 
+                    className="w-full h-40 object-cover rounded-xl" 
+                    alt="food item"
                 />
+                <button className="p-2 bg-white shadow-md rounded-xl absolute bottom-4 right-4 text-sm font-semibold">
+                    Add +
+                </button>
             </div>
            </div>
         ))}
