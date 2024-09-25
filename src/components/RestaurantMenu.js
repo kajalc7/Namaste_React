@@ -1,6 +1,7 @@
 import Shimmer from "./Shimmer";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
+import RestaurantCategory from "./RestaurantCategory";
 
 //responsibility of restaurant menu fetching data and displaying data 
 //ideally it should be rsponsible for dispalying dtaa
@@ -33,9 +34,9 @@ const RestaurantMenu = ()=>{
     // console.log(categories1)
 
  // filtering data on basis of categories
-    const categories1 = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
+    const categories = ResInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(c=>c.card?.card?.["@type"]==="type.googleapis.com/swiggy.presentation.food.v2.ItemCategory")
 
-    console.log(categories1)
+    console.log(categories)
 
 
     return (
@@ -45,6 +46,8 @@ const RestaurantMenu = ()=>{
             <p className="font-bold my-10 text-lg">{cuisines.join(", ")}
                 - {costForTwoMessage}
             </p>
+        {/*categories accordion*/}
+        {categories.map((category) => <RestaurantCategory/>)}
         </div>
     )
 }
