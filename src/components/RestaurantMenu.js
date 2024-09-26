@@ -47,7 +47,11 @@ const RestaurantMenu = ()=>{
                 - {costForTwoMessage}
             </p>
         {/*categories accordion*/}
-        {categories.map((category) => <RestaurantCategory key={category?.card?.card?.title} data = {category?.card?.card}/>)}
+        {categories.map((category, index) => 
+        <RestaurantCategory key={category?.card?.card?.title} 
+        data = {category?.card?.card}
+        showItems={index===1  && true}//this line will only expand that category mtlb ki sec category(index start from 0) other accordian will be closed
+        />)}
         </div>
     )
 }
