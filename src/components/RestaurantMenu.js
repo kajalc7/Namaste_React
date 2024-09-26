@@ -55,7 +55,10 @@ const RestaurantMenu = ()=>{
         <RestaurantCategory key={category?.card?.card?.title} 
         data = {category?.card?.card}
         showItems={index===showIndex ? true : false}
-        setshowIndex={()=> setshowIndex(index)}
+        setshowIndex={() => {
+            // Toggle between opening and collapsing
+            setshowIndex(index === showIndex ? null : index);
+        }}
 
         />))}
         </div>
