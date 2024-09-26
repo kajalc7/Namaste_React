@@ -47,11 +47,12 @@ const RestaurantMenu = ()=>{
                 - {costForTwoMessage}
             </p>
         {/*categories accordion*/}
-        {categories.map((category, index) => 
+        {categories.map((category, index) => (
+            //rescategory is controlled component now
         <RestaurantCategory key={category?.card?.card?.title} 
         data = {category?.card?.card}
-        showItems={index===1  && true}//this line will only expand that category mtlb ki sec category(index start from 0) other accordian will be closed
-        />)}
+        showItems={index===1 ? true : false}//this line can also be written using ternary operator
+        />))}
         </div>
     )
 }
