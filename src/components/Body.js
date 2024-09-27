@@ -62,6 +62,10 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 //console.log(filteredRestuarants);
               }}>Search</button>
             </div>
+            <div className="m-10 p-4">
+            <label>UserName:</label>
+            <input type="text" className="border border-solid border-black rounded-md"/>
+            </div>
             <div className="m-4 p-4">
             <button className="px-4 py-2 bg-red-200 m-4 rounded-md" 
             onClick=
