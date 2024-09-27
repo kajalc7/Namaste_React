@@ -39,6 +39,7 @@ const Grocery = lazy(()=>import("./components/Grocery"));
    }, [])
 
    //how to pass this login information in  my usercontext to do so we use context provider
+   //we have wrapper our app js because we want loggedinusr to all over our app
    return(
       <UserContext.Provider value = {{loggedInUser: userName}}>
       <div className="App">
