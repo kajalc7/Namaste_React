@@ -42,7 +42,7 @@ const Grocery = lazy(()=>import("./components/Grocery"));
    //we have wrapper our app js because we want loggedinusr to all over our app
    //now our default value wil be overridden by our conext information which we provided"
    return(
-      <UserContext.Provider value = {{loggedInUser: userName}}>
+      <UserContext.Provider value = {{loggedInUser: userName , setuserName}}>
       <div className="App">
          <Header/>
          {/*if my path is  =/  */}

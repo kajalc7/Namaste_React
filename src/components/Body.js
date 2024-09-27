@@ -1,8 +1,10 @@
 import RestaurantCard, {withOpenLabel} from "./RestaurantCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
+
 
 
 
@@ -45,12 +47,13 @@ if(onlineStatus===false)
     <h1 className ="offline-status">Looks like you are offline please check your internet connection</h1>
 )
 
+const {loggedInUser,setuserName} = useContext(UserContext);
 
 return listofRestaurants.length === 0? <Shimmer/> :(
        <div className="body">
           <div className="flex justify-center place-content-center">
             <div className="m-4 p-4">
-              <input type="text" className="border border-solid border-black rounded-md" value={searchText}
+              <input type="text" className="border border-solid border-black rounded-md p-2" value={searchText}
                onChange={(e)=>{
                 setSearchText(e.target.value);
                 }}/>
@@ -62,9 +65,11 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 //console.log(filteredRestuarants);
               }}>Search</button>
             </div>
-            <div className="m-10 p-4">
+            <div className="m-8 p-4">
             <label>UserName:</label>
-            <input type="text" className="border border-solid border-black rounded-md"/>
+            <input type="text" className="border border-solid border-black rounded-md p-2" 
+            value={loggedInUser}
+            onChange={(e)=> setuserName(e.target.value)}/>
             </div>
             <div className="m-4 p-4">
             <button className="px-4 py-2 bg-red-200 m-4 rounded-md" 
