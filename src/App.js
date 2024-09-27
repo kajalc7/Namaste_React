@@ -7,6 +7,8 @@ import About from './components/About';
 import ContactUs from './components/ContactUs';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
+import UserContext from './utils/UserContext';
+import { useState, useEffect } from 'react';
 //import Grocery from './components/Grocery';
 
 //chunking
@@ -24,7 +26,21 @@ const Grocery = lazy(()=>import("./components/Grocery"));
 
 
  const AppLayout=()=>{
+
+   const[userName, setuserName] = useState();
+
+   //authentication
+   useEffect(()=>{
+      //make an api call and send username and passwword
+      const data ={
+         Name: "Kajal Chaudhary"
+      };
+      setuserName(data.Name)
+   }, [])
+
+   //how to pass this login information in  my usercontext to do so we use context provider
    return(
+      <UserContext.Provider value = {{loggedInUser: userName}}>
       <div className="App">
          <Header/>
          {/*if my path is  =/  */}
@@ -35,6 +51,7 @@ const Grocery = lazy(()=>import("./components/Grocery"));
          {/* <ContactUs/> */}
          <Outlet/>
       </div>
+      </UserContext.Provider>
    )
  }
 
