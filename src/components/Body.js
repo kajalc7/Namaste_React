@@ -17,7 +17,7 @@ const[searchText,setSearchText]=useState("");
 //higher order 
 const RestaurantCardOpened = withOpenLabel(RestaurantCard);
 
-console.log(listofRestaurants);
+//console.log(listofRestaurants);
 
 
 useEffect(()=>{
@@ -55,11 +55,11 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 setSearchText(e.target.value);
                 }}/>
               <button className="px-2 py-2 bg-green-100 m-4 rounded-md" onClick={()=>{
-                console.log(searchText)
+                //console.log(searchText)
 
                 const filteredRestuarants = listofRestaurants.filter((res)=> res.info.name.toLowerCase().includes(searchText.toLowerCase()));
                 setFilteredRestaurants(filteredRestuarants);
-                console.log(filteredRestuarants);
+                //console.log(filteredRestuarants);
               }}>Search</button>
             </div>
             <div className="m-4 p-4">

@@ -1,12 +1,18 @@
 import React from "react";
 import { LOGO_URL } from "../utils/constants";
-import { useState } from "react";
+import { useState , useContext} from "react";
 import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
   const onlinestatus = useOnlinestatus();
   const [btnNameReact, setbtnNameReact] = useState("Login");
+
+  //the usercontext we can access it any component using  usecontext hooks
+
+  const {loggedInUser} = useContext(UserContext);
+  console.log(loggedInUser);
 
   return (
     <div className="flex justify-between items-center bg-green-200  shadow-lg px-4 py-4 w-full max-w-screen-s rounded-xl mx-auto sm:bg-orange-200  lg:bg-orange-400">
@@ -40,6 +46,7 @@ const Header = () => {
           >
             {btnNameReact}
           </button>
+          <li className="font-bold">{loggedInUser}</li>
         </ul>
       </div>
     </div>
