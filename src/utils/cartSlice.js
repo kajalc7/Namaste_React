@@ -7,7 +7,8 @@ const cartSlice = createSlice({
     },
     reducers:{
         addItem: (state, action) => {
-            //mutating or updating our state
+            //mutating or updating our state directly in vanilla redux older it does not allow to mutate the state
+            //create anew state from my satte and modify new state this is how we sue to do in vanilla redux
             state.items.push(action.payload);
         },
         removeItem: (state) => {
