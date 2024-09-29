@@ -18,7 +18,7 @@ const Header = () => {
   //subscribing to a store using selector for reading data and ts nothing just a hook
 
   const cartItems = useSelector((store) => store.cart.items);//we only want item data from our store 
-  // console.log(cartItems);
+  console.log(cartItems);
 
   return (
     <div className="flex justify-between items-center bg-green-200  shadow-lg px-4 py-4 w-full max-w-screen-s rounded-xl mx-auto sm:bg-orange-200  lg:bg-orange-400">
