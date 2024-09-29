@@ -4,6 +4,7 @@ import { useState , useContext} from "react";
 import { Link } from "react-router-dom";
 import useOnlinestatus from "../utils/useOnlineStatus";
 import UserContext from "../utils/UserContext";
+import  {useSelector} from "react-redux";
 
 const Header = () => {
   const onlinestatus = useOnlinestatus();
@@ -12,7 +13,12 @@ const Header = () => {
   //the usercontext we can access it any component using  usecontext hooks
 
   const {loggedInUser} = useContext(UserContext);
-  console.log(loggedInUser);
+  // console.log(loggedInUser);
+
+  //subscribing to a store using selector for reading data and ts nothing just a hook
+
+  const cartItems = useSelector((store) => store.cart.items);//we only want item data from our store 
+  // console.log(cartItems);
 
   return (
     <div className="flex justify-between items-center bg-green-200  shadow-lg px-4 py-4 w-full max-w-screen-s rounded-xl mx-auto sm:bg-orange-200  lg:bg-orange-400">
@@ -35,7 +41,7 @@ const Header = () => {
           <li>
             <Link to="/grocery">Grocery</Link>
           </li>
-          <li>Cart</li>
+          <li>Cart-({cartItems.length} items)</li>
           <button
             className="px-4 py-2 bg-blue-500 text-white rounded"
             onClick={() => {

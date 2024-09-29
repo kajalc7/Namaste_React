@@ -42,7 +42,7 @@ const Grocery = lazy(()=>import("./components/Grocery"));
 
  //now we will wrap all our app which is our root of project(app.js) uding provider
    return(
-      <provider store={appStore}>
+      <Provider store={appStore}>
       <UserContext.Provider value = {{loggedInUser: userName , setuserName}}>
       <div className="App">
          <Header/>
@@ -55,7 +55,7 @@ const Grocery = lazy(()=>import("./components/Grocery"));
          <Outlet/>
       </div>
       </UserContext.Provider>
-      </provider>
+      </Provider>
    )
  }
 
