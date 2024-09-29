@@ -9,6 +9,8 @@ import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
 import UserContext from './utils/UserContext';
 import { useState, useEffect } from 'react';
+import { Provider } from 'react-redux'; //building bridge between our project and store that why its coming from react redx 
+import appStore from './utils/appStore';
 //import Grocery from './components/Grocery';
 
 //chunking
@@ -38,10 +40,9 @@ const Grocery = lazy(()=>import("./components/Grocery"));
       setuserName(data.Name)
    }, [])
 
-   //how to pass this login information in  my usercontext to do so we use context provider
-   //we have wrapper our app js because we want loggedinusr to all over our app
-   //now our default value wil be overridden by our conext information which we provided"
+ //now we will wrap all our app which is our root of project(app.js) uding provider
    return(
+      <provider store={appStore}>
       <UserContext.Provider value = {{loggedInUser: userName , setuserName}}>
       <div className="App">
          <Header/>
@@ -54,6 +55,7 @@ const Grocery = lazy(()=>import("./components/Grocery"));
          <Outlet/>
       </div>
       </UserContext.Provider>
+      </provider>
    )
  }
 
