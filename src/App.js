@@ -11,6 +11,7 @@ import UserContext from './utils/UserContext';
 import { useState, useEffect } from 'react';
 import { Provider } from 'react-redux'; //building bridge between our project and store that why its coming from react redx 
 import appStore from './utils/appStore';
+import Cart from './components/Cart';
 //import Grocery from './components/Grocery';
 
 //chunking
@@ -79,6 +80,10 @@ const appRouter = createBrowserRouter([
          { 
             path:'/grocery',
             element:<Suspense fallback= {<h1>Grocery is loading</h1>}><Grocery/></Suspense>,//this fallback wil take content which you want to show while your component is loading
+         },
+         { 
+            path:"/cart",//resid this is after colon showing it will hbe dynmaic and keep changing
+            element:<Cart/>,
          },
          { 
             path:"/restaurants/:resId",//resid this is after colon showing it will hbe dynmaic and keep changing
