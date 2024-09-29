@@ -14,8 +14,8 @@ const cartSlice = createSlice({
         },
         clearCart: (state) => {
             state.items.length = 0;
-        }
-    }
+        },
+    },
 });
 //createSlice funtion  will return object in cartSlice and cartSlice will lokk like this
 // {
