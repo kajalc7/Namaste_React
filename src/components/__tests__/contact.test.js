@@ -5,7 +5,7 @@ import "@testing-library/jest-dom";
  describe("contact us component tetscases", () =>{
 
         //testcase1
-    test("Should load contact us component",()=>{
+    it("Should load contact us component",()=>{
 
         //whenever u r testing ui componnet i reat u have to render that component in JSdom first
 
@@ -18,7 +18,7 @@ import "@testing-library/jest-dom";
     })
 
     //testcase 2
-    test("Should load button inside contact us component",()=>{
+    it("Should load button inside contact us component",()=>{
 
 
         render(<ContactUs/>);
