@@ -1,6 +1,6 @@
 import Header from "../Header"
 import "@testing-library/jest-dom"
-import { render ,screen} from "@testing-library/react"
+import { fireEvent, render ,screen} from "@testing-library/react"
 import { Provider } from "react-redux"
 import appStore from '../../utils/appStore';
 import { BrowserRouter } from "react-router-dom";
@@ -21,7 +21,7 @@ it("Should load header component with login button",() =>{
 
     expect(loginButton).toBeInTheDocument();
     
-})
+});
 
 //testcase2
 it("Should load header component with cartItems",() =>{
@@ -39,4 +39,27 @@ it("Should load header component with cartItems",() =>{
 
     expect(cartItems).toBeInTheDocument();
     
-})
+});
+
+//testcase3
+it("Should change login button to logout on click",() =>{
+
+    render(
+    <BrowserRouter>
+    <Provider store={appStore}>
+        <Header/>
+    </Provider>
+    </BrowserRouter>
+    )
+    const loginButton = screen.getByRole("button", {name:"Login"});
+
+    //firevent coming forom testing library
+    fireEvent.click(loginButton);
+
+    const logoutButton = screen.getByRole("button", {name:"Logout"});
+
+
+
+    expect(logoutButton).toBeInTheDocument();
+    
+});
