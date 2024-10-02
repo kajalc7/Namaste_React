@@ -56,11 +56,12 @@ it("should give top rated restaurant on clcik of top rated button", async () => 
     //when body component rendered
     expect(cardsbeforefilter.length).toBe(8)
 
-    const topratedRestaurant = screen.getByRole("button", { name: "Top Rated Button" });
+    const topratedRestaurant = screen.getByRole("button", { name: "Top Rated Restaurants" });
 
     fireEvent.click(topratedRestaurant);
     //screen should load top rated restaurant after click
 
-    const cards = screen.getAllByTestId("resCard")
-    expect(cards.length).toBe(2);
+    const cardsafterfilter = screen.getAllByTestId("resCard")
+    console.log(cardsafterfilter)
+    expect(cardsafterfilter.length).toBe(2);
 });

@@ -82,7 +82,7 @@ return listofRestaurants.length === 0? <Shimmer/> :(
                 );
                 setFilteredRestaurants(filteredlist);
             }}>
-              Top Rated Button</button>
+              Top Rated Restaurants</button>
               </div>
           </div>
              <div className="flex flex-wrap">
