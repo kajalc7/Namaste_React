@@ -22,7 +22,9 @@ test("Should load button inside contact us component",()=>{
 
     render(<ContactUs/>);
 
-    const button = screen.getByRole("button")
+    // const button = screen.getByRole("button")
+    const button = screen.getByText("Submit")
+
 
     expect(button).toBeInTheDocument();
 })
