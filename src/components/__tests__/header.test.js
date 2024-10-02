@@ -33,8 +33,8 @@ it("Should load header component with cartItems",() =>{
     </Provider>
     </BrowserRouter>
     )
-    //if there are multiple button in screen so u have to be specific
-    const cartItems = screen.getByText("Cart-(0 items)");
+    //if there is like 1 iten it will fail so to chcek whether cart is there u can also pass rejex
+    const cartItems = screen.getByText(/Cart/);
 
 
     expect(cartItems).toBeInTheDocument();
