@@ -2,54 +2,58 @@ import { render, screen } from "@testing-library/react"
 import ContactUs from "../ContactUs";
 import "@testing-library/jest-dom";
 
-//testcase1
-test("Should load contact us component",()=>{
+ describe("contact us component tetscases", () =>{
 
-    //whenever u r testing ui componnet i reat u have to render that component in JSdom first
+        //testcase1
+    test("Should load contact us component",()=>{
 
-    render(<ContactUs/>);
+        //whenever u r testing ui componnet i reat u have to render that component in JSdom first
 
-    //now we will test did my heading rendered  using screen screen is a objectwhich we get from testing librray
-    const heading = screen.getByRole("heading");//this will find all heading component
+        render(<ContactUs/>);
 
-    expect(heading).toBeInTheDocument();
-})
+        //now we will test did my heading rendered  using screen screen is a objectwhich we get from testing librray
+        const heading = screen.getByRole("heading");//this will find all heading component
 
-//testcase 2
-test("Should load button inside contact us component",()=>{
+        expect(heading).toBeInTheDocument();
+    })
 
-
-    render(<ContactUs/>);
-
-    // const button = screen.getByRole("button")
-    const button = screen.getByText("Submit")
-
-    expect(button).toBeInTheDocument();
-})
-
-//testcase 3
-test("Should load input name inside contact us component",()=>{
+    //testcase 2
+    test("Should load button inside contact us component",()=>{
 
 
-    render(<ContactUs/>);
+        render(<ContactUs/>);
 
-    const inputName = screen.getByPlaceholderText("name")
+        // const button = screen.getByRole("button")
+        const button = screen.getByText("Submit")
 
-    expect(inputName).toBeInTheDocument();
-})
+        expect(button).toBeInTheDocument();
+    })
 
-//testcase 4
-test("Should load 2 input boxes inside contact us component",()=>{
-
-    render(<ContactUs/>);
-
-    // this is knowna s querying
-    const inputboxes = screen.getAllByRole("textbox")
-    
-    console.log(inputboxes);//this will return jsx element that is object or virtual dom object
-    console.log(inputboxes.length);
+    //testcase 3
+    test("Should load input name inside contact us component",()=>{
 
 
-    expect(inputboxes.length).toBe(2);
-})
+        render(<ContactUs/>);
+
+        const inputName = screen.getByPlaceholderText("name")
+
+        expect(inputName).toBeInTheDocument();
+    })
+
+    //testcase 4
+    test("Should load 2 input boxes inside contact us component",()=>{
+
+        render(<ContactUs/>);
+
+        // this is knowna s querying
+        const inputboxes = screen.getAllByRole("textbox")
+        
+        console.log(inputboxes);//this will return jsx element that is object or virtual dom object
+        console.log(inputboxes.length);
+
+
+        expect(inputboxes.length).toBe(2);
+    })
+ })
+
 
