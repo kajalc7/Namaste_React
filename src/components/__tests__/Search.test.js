@@ -62,6 +62,6 @@ it("should give top rated restaurant on clcik of top rated button", async () => 
     //screen should load top rated restaurant after click
 
     const cardsafterfilter = screen.getAllByTestId("resCard")
-    console.log(cardsafterfilter)
+    // console.log(cardsafterfilter)
     expect(cardsafterfilter.length).toBe(2);
 });
