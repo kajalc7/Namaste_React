@@ -48,8 +48,7 @@ import "@testing-library/jest-dom";
         // this is knowna s querying
         const inputboxes = screen.getAllByRole("textbox")
         
-        console.log(inputboxes);//this will return jsx element that is object or virtual dom object
-        console.log(inputboxes.length);
+        // console.log(inputboxes);//this will return jsx element that is object or virtual dom object
 
 
         expect(inputboxes.length).toBe(2);
