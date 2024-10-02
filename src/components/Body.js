@@ -53,7 +53,9 @@ return listofRestaurants.length === 0? <Shimmer/> :(
        <div className="body">
           <div className="flex justify-center place-content-center">
             <div className="m-4 p-4">
-              <input type="text" className="border border-solid border-black rounded-md p-2" value={searchText}
+              <input type="text" 
+               data-testid="searchInput"
+              className="border border-solid border-black rounded-md p-2" value={searchText}
                onChange={(e)=>{
                 setSearchText(e.target.value);
                 }}/>
