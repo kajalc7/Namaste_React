@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import appStore from "../../utils/appStore"
 import Header from "../Header";
 import "@testing-library/jest-dom";
+import Cart from "../Cart"
 
 
 
@@ -27,6 +28,7 @@ it("should load restuarant menu component", async () => {
         <BrowserRouter>
         <Header/>
         <RestaurantMenu/>
+        <Cart/>
         </BrowserRouter>
         </Provider>
     ))
@@ -57,6 +59,18 @@ it("should load restuarant menu component", async () => {
     fireEvent.click(addbtn[1])
 
     expect(screen.getByText("Cart-(2 items)")).toBeInTheDocument();
+
+    //want to see my cart component have two item or not
+    const itemsincartpage = screen.getAllByTestId("foodItems")
+
+    expect(itemsincartpage.length).toBe(18);
+
+    fireEvent.click(screen.getByRole("button",{name:"Clear cart"}))
+
+    expect(itemsincartpage.length).toBe(18);
+
+    expect(screen.getByText("Your cart is empty please add items to you cart")).toBeInTheDocument();
+
 
 
 })
