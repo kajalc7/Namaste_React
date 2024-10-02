@@ -23,6 +23,8 @@ it("should render the body component with search button", async () => {
         )
     );
 
+    const cardsbeforesearchclick = screen.getAllByTestId("resCard")
+    expect(cardsbeforesearchclick.length).toBe(8)
 
     const searchBtn = screen.getByRole("button", { name: "Search" });
      //
